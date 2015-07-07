@@ -1,0 +1,18 @@
+#!/bin/bash
+
+env_str=""
+
+for line in `cat $PWD/.env`; do
+  env_str+="$line "
+done
+
+# If there were no environment variables then this command pretty much does nothing
+LEN=$(echo ${#env_str})
+if [ $LEN -lt 1 ]; then
+  env_str=""
+else
+  env_str="env $env_str"
+fi
+
+# Execute the command with the environment variables from your .env file loaded
+eval "$env_str $@"
