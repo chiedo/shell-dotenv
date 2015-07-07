@@ -1,5 +1,6 @@
 #!/bin/bash
-
+echo "SHELL DOTENV"
+echo "============"
 echo "Starting installation..."
 sudo curl -o /usr/bin/dotenv https://raw.githubusercontent.com/chiedojohn/shell-dotenv/master/dotenv
 
@@ -7,4 +8,3 @@ echo "Updating permissions..."
 sudo chmod +x /usr/bin/dotenv
 
 echo "Installation complete..."
-echo "Swag"
